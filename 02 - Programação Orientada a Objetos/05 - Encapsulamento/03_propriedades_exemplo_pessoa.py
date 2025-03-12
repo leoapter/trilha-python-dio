@@ -1,3 +1,6 @@
+# Propriedades
+
+
 class Pessoa:
     def __init__(self, nome, ano_nascimento):
         self.nome = nome
@@ -5,7 +8,7 @@ class Pessoa:
 
     @property
     def idade(self):
-        _ano_atual = 2022
+        _ano_atual = 2025
         return _ano_atual - self._ano_nascimento
 
 

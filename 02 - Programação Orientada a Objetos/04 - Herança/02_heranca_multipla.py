@@ -1,3 +1,11 @@
+# Herança Múltipla
+# class A:
+#   pass
+# class B(A):
+#   pass
+# class C(A, B):
+#   pass
+
 class Animal:
     def __init__(self, nro_patas):
         self.nro_patas = nro_patas

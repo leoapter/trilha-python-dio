@@ -1,3 +1,7 @@
+# Método count
+# Conta quantas são as ocorrências de um determinado valor em uma sequencia na tupla
+
+
 cores = (
     "vermelho",
     "azul",

@@ -1,3 +1,16 @@
+# Herança Simles
+# Classe filha que deriva ou herda as características e comportamentos da classe pai (base)
+# Benefícios: representa bem os relacionamentos da vida real
+# Fornece a reutilização de código, Não precisamos escrever novamente o mesmo código repetidamente
+# ** Permite adicionar mais resursos a uma classe, sem modifica-la
+# ** È de natureza transitiva: Se a classe B herdar da classe A, todas as subclasses de B hersarão automaticamente da classe A
+# Sintaxe:
+# class A:
+#   pass
+#
+# class B(A):
+#   pass
+
 class Veiculo:
     def __init__(self, cor, placa, numero_rodas):
         self.cor = cor
