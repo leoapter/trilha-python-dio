@@ -1,4 +1,5 @@
 # Classes Abstratas
+# Interfaces são contratos que definem o que uma classe deve fazer ou não.
 # Interfaces são classes abstratas que definem métodos que devem ser implementados por suas subclasses.
 # Em Python, uma classe abstrata é uma classe que não pode ser instanciada, mas pode ser herdada.
 # Quando transformamos um método em abstrato, transformamos a classe em abstrata.
@@ -26,11 +27,14 @@
 #     def nome_do_metodo(self):
 #         pass
 
-from abc import ABC, abstractmethod, abstractproperty
+
+# Para tornar obrigatório utilizar/implementar a função ligar e desligar, precisamos implementar um contrato
+
+from abc import ABC, abstractmethod, abstractproperty # Abstract Base Class
 
 
 class ControleRemoto(ABC): # Classe abstrata
-    @abstractmethod        # Método abstrato
+    @abstractmethod        # Decorador de Implementação do Método abstrato
     def ligar(self):       # Método abstrato
         pass
 
@@ -43,7 +47,7 @@ class ControleRemoto(ABC): # Classe abstrata
     def marca(self):
         pass
 
-
+# Uma vez implementado o método abstrato, a sub-classe é obrigada a implementar também
 class ControleTV(ControleRemoto): # Herança do método abstrato da classe ControleRemoto
     def ligar(self):              # Implementação do método abstrato da classe ControleRemoto
         print("Ligando a TV...")  # Implementação do método abstrato
@@ -57,7 +61,7 @@ class ControleTV(ControleRemoto): # Herança do método abstrato da classe Contr
     def marca(self):
         return "Philco"
 
-
+# Uma vez implementado o método abstrato na sub-classe, a sub-sub-classe também pe obrigada a faze-lo
 class ControleArCondicionado(ControleRemoto): # Herança do método abstrato da classe ControleRemoto
     def ligar(self):                          # Implementação do método abstrato da classe ControleRemoto
         print("Ligando o Ar Condicionado...")
@@ -68,6 +72,7 @@ class ControleArCondicionado(ControleRemoto): # Herança do método abstrato da 
         print("Desligado!")
 
     @property         # Definição de uma propriedade abstrata. Simula um método abstrato
+    
     def marca(self):
         return "LG"
 

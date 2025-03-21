@@ -1,8 +1,10 @@
 # Variaveis de classe e variveis de instancia
 # Variaveis de classe são compartilhadas por todas as instancias de uma classe
 # Variaveis de instancia são unicas para cada instancia
-# Atributos de classe são definidos fora de qualquer metodo
+# Atributos de classe são definidos fora de qualquer metodo. Os atributos de classe são compartilhados entre os objetos
 # Atributos de instancia são definidos dentro de um metodo construtor
+# Atributos de instância são diferentes para cada objeto(cada objeto tem uma cópia)
+# Atrubutos de objeto: Todos os objetos nascem com o mesmo número de atributos da classe e instância
 # O que é uma classe? É um modelo que define os atributos e comportamentos de um objeto
 # O que é um objeto? É uma instancia de uma classe
 # O que é um atributo? É uma caracteristica do objeto
@@ -30,7 +32,7 @@
 # class nome_da_classe:
 #    nome_do_atributo = valor_do_atributo
 
-#    def __init__(self, atributo1, atributo2):
+#    def __init__(self, atributo1, atributo2):   # Lembrar sempre que self "representa"  instância. Instância tal, atributo1 e atributo2.
 #         self.atributo1 = atributo1
 #         self.atributo2 = atributo2
 
@@ -38,7 +40,7 @@ class Estudante:       # Classe, modelo,
     escola = "DIO"     # Variavel de classe ( atributo de classe  e atribuição de valor)
 
     def __init__(self, nome, matricula): # Metodo construtor
-        self.nome = nome                 # Variavel de instancia
+        self.nome = nome                 # Variavel de instancia. É único para cada instância/objeto
         self.matricula = matricula       # Variavel de instancia
 
     def __str__(self) -> str:            # Metodo especial
